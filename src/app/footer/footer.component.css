@@ -1,0 +1,46 @@
+/*Footer Menu*/
+.footer-menu{
+    position:fixed;
+    bottom:0px;
+    height:50px;
+    left:0px;
+    right:0px;
+     background: rgba(23,185,148,1);
+    background: -moz-linear-gradient(left, rgba(23,185,148,1) 0%, rgba(19,143,194,1) 59%, rgba(19,143,194,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(23,185,148,1)), color-stop(59%, rgba(19,143,194,1)), color-stop(100%, rgba(19,143,194,1)));
+    background: -webkit-linear-gradient(left, rgba(23,185,148,1) 0%, rgba(19,143,194,1) 59%, rgba(19,143,194,1) 100%);
+    background: -o-linear-gradient(left, rgba(23,185,148,1) 0%, rgba(19,143,194,1) 59%, rgba(19,143,194,1) 100%);
+    background: -ms-linear-gradient(left, rgba(23,185,148,1) 0%, rgba(19,143,194,1) 59%, rgba(19,143,194,1) 100%);
+    background: linear-gradient(to right, rgba(23,185,148,1) 0%, rgba(19,143,194,1) 59%, rgba(19,143,194,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17b994', endColorstr='#138fc2', GradientType=1 );
+    transition:all 250ms ease;
+}
+
+.footer-menu-scroll{
+    -moz-transform: translateY(120px);
+    -webkit-transform: translateY(120px);
+    -o-transform: translateY(120px);
+    -ms-transform: translateY(120px);
+    transform: translateY(120px);    
+    transition:all 250ms ease;
+}
+
+.footer-menu-fixed{
+    -moz-transform: translateY(0px)!important;
+    -webkit-transform: translateY(0px)!important;
+    -o-transform: translateY(0px)!important;
+    -ms-transform: translateY(0px)!important;
+    transform: translateY(0px)!important; 
+    transition:all 250ms ease;
+}
+
+.footer-menu ul{
+     padding: 0 15px; margin: 0; width: 100%
+}
+.footer-menu li{
+    display: inline-block;
+    width: 20%;
+}
+.footer-menu li a i{ line-height: 20px;}
+.footer-menu li a{ color:#fff; line-height: 30px; }
+.footer-menu li a em{ display: block; line-height: 0; font-style: normal; font-size: 11px; padding-top: 8px;}

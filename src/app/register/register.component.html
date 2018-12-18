@@ -1,0 +1,75 @@
+﻿
+<div class="login-page">
+        <div class="login-page-content h-100">
+<div class="background" ><img src="../assets/img/background.png" alt=""></div>
+<div class="row mx-0">
+    <div class="col">
+<ngb-tabset [activeId]="activeTab" (tabChange)="activeTab = $event.nextId">
+    <ngb-tab  id="login" >
+        
+            <ng-template ngbTabTitle>  <a routerLink="/login" class="btn btn-link">Login</a></ng-template>
+      
+    </ngb-tab>
+    <ngb-tab id="register">
+      <ng-template ngbTabTitle>  <a routerLink="/register" class="btn btn-link">Register</a></ng-template>
+      <ng-template ngbTabContent> 
+            <div class="login-input-content">
+                            
+                    <div class="input-group">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text"><i class="material-icons">person</i></span>
+                         </div>
+                         <input type="text" class="form-control" placeholder="First Name" aria-label="Username">
+                     </div>
+                     <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="material-icons text-white">person</i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Middle Name" aria-label="Username">
+                        </div>
+                        <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="material-icons text-white">person</i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Last Name" aria-label="Username">
+                            </div>
+                        <div class="input-group">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text"><i class="material-icons">email</i></span>
+                         </div>
+                         <input type="email" class="form-control" placeholder="Email Id" aria-label="Username">
+                     </div>
+                       <div class="input-group">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text"><i class="material-icons">phone</i></span>
+                         </div>
+                         <input type="Phone Number" class="form-control" placeholder="Phone Number" aria-label="Username">
+                     </div>
+                     <div class="input-group">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text"><i class="material-icons">lock</i></span>
+                         </div>
+                         <input type="password" class="form-control" placeholder="Password" aria-label="Username">
+                     </div>
+                     <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="material-icons">lock</i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username">
+                        </div>
+                 
+                 </div>
+                 <div class="row mx-0 justify-content-end no-gutters">
+                     <div class="col-6">
+                         <a href="/home" class="btn btn-block gradient border-0 z-3">Sign Up</a>
+                     </div>
+                 </div>
+                                                 <a href="" class="btn btn-link text-white btn-block text-center mt-3">Already Register ! Login Here</a>
+                 <div class="clearfix"></div>
+
+      </ng-template>
+    </ngb-tab>
+  
+  </ngb-tabset>
+</div></div>
+ </div></div>

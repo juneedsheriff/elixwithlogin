@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <title>Elix App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+
+</head>
+<body class="fixed-header sidebar-right-close sidebar-left-close">
+ 
+    <app></app>
+ 
+    <script type='text/javascript'>
+        (function()
+        {
+           if( window.localStorage ) {
+              if( !localStorage.getItem( 'firstLoad' ) ) {
+                  localStorage[ 'firstLoad' ] = true;
+                  window.location.reload();
+               }
+             else
+                 localStorage.removeItem( 'firstLoad' );
+           }
+       })();
+      
+      </script> 
+      
+</body>
+</html>
