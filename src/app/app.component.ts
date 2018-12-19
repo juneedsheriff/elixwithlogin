@@ -1,9 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
- 
-
-
-import { AuthenticationService } from './_services';
+ import { AuthenticationService } from './_services';
 import { User } from './_models';
 
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
@@ -11,8 +8,7 @@ export class AppComponent implements OnInit {
     currentUser: User;
     constructor(
         private router: Router,
-        private route: ActivatedRoute,
-      
+       
         private authenticationService: AuthenticationService
     ) {
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
@@ -23,11 +19,16 @@ export class AppComponent implements OnInit {
         this.router.navigate(['/login']);
     }
    
- ngOnInit()
+
+   public ngOnInit()
     {
- 
+
+        this.router.routeReuseStrategy.shouldReuseRoute = function () {
+            return false;
+          };
+       
     }     
       
 }
 
- 
+

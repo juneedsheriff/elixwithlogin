@@ -28,9 +28,17 @@
     overflow-y: auto;
     position: relative;
 }
+ 
 
 .background {
-    background: #0366cb;
+    background: rgba(17,143,194,1);
+    background: -moz-linear-gradient(top, rgba(17,143,194,1) 0%, rgba(17,143,194,1) 43%, rgba(25,185,151,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(17,143,194,1)), color-stop(43%, rgba(17,143,194,1)), color-stop(100%, rgba(25,185,151,1)));
+    background: -webkit-linear-gradient(top, rgba(17,143,194,1) 0%, rgba(17,143,194,1) 43%, rgba(25,185,151,1) 100%);
+    background: -o-linear-gradient(top, rgba(17,143,194,1) 0%, rgba(17,143,194,1) 43%, rgba(25,185,151,1) 100%);
+    background: -ms-linear-gradient(top, rgba(17,143,194,1) 0%, rgba(17,143,194,1) 43%, rgba(25,185,151,1) 100%);
+    background: linear-gradient(to bottom, rgba(17,143,194,1) 0%, rgba(17,143,194,1) 43%, rgba(25,185,151,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#118fc2', endColorstr='#19b997', GradientType=0 );
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -39,8 +47,9 @@
     top: 0;
     left: 0;
     box-sizing: border-box;
+    
 }
-
+.invalid-feedback{padding: 10px;}
 .login-input-content {
     -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12)!important;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12)!important;

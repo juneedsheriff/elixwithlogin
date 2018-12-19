@@ -1,7 +1,16 @@
 ﻿<div class="login-page">
+        <div class="background" ><img src="../assets/img/background.png" alt=""></div>
         <div class="login-page-content h-100">
-<div class="background" ><img src="../assets/img/background.png" alt=""></div>
+
 <div class="row mx-0">
+    <div class="col text-center mt-2 mb-1">
+        
+        <img src="../assets/img/elix-nri-logo.png" alt="" class="login-logo">
+        
+        
+    </div>
+</div>
+<div class="row mx-0 mb-5">
     <div class="col">
 <ngb-tabset>
     <ngb-tab title="Login" >
@@ -30,9 +39,10 @@
              </div>
          </div>
          <div class="row mx-0 justify-content-end no-gutters">
-                <button [disabled]="loading" class="btn btn-primary">Login</button>
+                <div class="col-6">
+                <button [disabled]="loading" class="btn btn-block gradient border-0 pointer">Login</button>
               
-               
+               </div>
          </div>
          <a routerLink="/login"class="btn btn-link text-white btn-block text-center mt-3">Forget Password?</a>
          </form>
@@ -91,12 +101,14 @@
                        <div class="col-6">
                            <a href="/home" class="btn btn-block gradient border-0 z-3">Sign Up</a>
                        </div>
-                   </div>
-                                                  
+                   </div>                          
                    <div class="clearfix"></div>
   
         </ng-template>
       </ngb-tab>
   </ngb-tabset>
-</div></div>
- </div></div>
+</div>
+</div>
+<div class="clearfix"></div>
+ </div>
+</div>
