@@ -1,0 +1,6 @@
+.inuifootspan{ margin-left: -47px; color:#fff}
+
+.selectedvalue.bmi  .form-control{ padding-right: 47px; width: 70px;}
+.selectedvalue.bmi:after{
+    content: none
+}

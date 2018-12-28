@@ -40,6 +40,9 @@ Cutomize css starts
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ ::-webkit-scrollbar {
+  display: none;
+  }
  :root {
     --blue: #7979ff;
     --indigo: #6610f2;
@@ -91,7 +94,7 @@ Cutomize css starts
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
   }
-  
+  .nbnone{ background: none !important; box-shadow: none !important}
   @-ms-viewport {
     width: device-width;
   }
@@ -99,7 +102,9 @@ Cutomize css starts
   article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
   }
-  
+  .range-slider-container .card .card-header{border-bottom: 1px solid rgba(0, 0, 0, 0.125); color: #3F51B5}
+  .btn.calendar{ width: 2.75rem;  background-size: 23px; background-image:url(assets/img/calendar.png) !important; background-repeat: no-repeat; background-position: center;
+  }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -2281,8 +2286,8 @@ Cutomize css starts
   
   .btn-primary {
     color: #fff;
-    background-color: #7979ff;
-    border-color: #7979ff;
+    background-color: #1f95c4;
+    border-color: #1f95c4;
   }
   
   .btn-primary:hover {
@@ -10180,7 +10185,7 @@ Cutomize css starts
     width: 100%;
     height: auto;
     min-height: 44px;
-    z-index: 8;
+    z-index: 101;
     display: flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -10397,8 +10402,11 @@ Cutomize css starts
   
   .fixed-header .wrapper {
     padding-top: 44px;
+   
   }
-  
+  .fixed-header .wrapper.wb{
+    margin-bottom: 100px
+  }
   .fixed-header .main-header {
     position: fixed;
     top: 0;
@@ -10509,7 +10517,7 @@ Cutomize css starts
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 999;
     background: #5d2cb4;
     color: #ffffff;
     overflow-y: auto;

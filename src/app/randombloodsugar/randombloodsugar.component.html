@@ -1,0 +1,194 @@
+<div class="wrapper">
+    <!--heading Starts here-->
+    <div class="container-fluid bg-light-opac">
+      <div class="row">
+        <div class="container my-3 main-container">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <button class="btn btn-rounded  text-uppercase" routerLink="/vitals"><i class="material-icons">arrow_back</i>
+                <span class="text-hide-xs"></span></button>
+            </div>
+            <div class="col">
+              <h2 class="content-color-primary page-title mb-2">Random Blood Sugar</h2>
+              <form class="form-inline mt-0">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" placeholder="Select Date" name="dp" ngbDatepicker #d="ngbDatepicker"
+                      (click)="d.toggle()">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-success  calendar" (click)="d.toggle()" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--heading Ends here-->
+  
+    <div class="container mt-4 main-container  range-slider-container">
+
+      <!--fasting row starts-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4 pmd-range-slider">
+            <div class="card-header">
+              <div class="row">
+                <div class="col heading-vitals"><strong>Fasting </strong></div>
+                <div class="col  text-right">
+                  <div class="range-slider-input">
+                    <div class="form-group selectedvalue">
+                      <input type="text" id="value-input" class="form-control arrow_box" value="60">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <nouislider [config]="fastingRange"></nouislider>
+            </div>
+          </div>
+      </div>
+    </div>
+ <!--fasting row Ends-->
+
+ <!--Afterfood Row starts-->
+ <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-4 pmd-range-slider">
+        <div class="card-header">
+          <div class="row">
+            <div class="col heading-vitals"><strong>After Food </strong></div>
+            <div class="col  text-right">
+              <div class="range-slider-input">
+                <div class="form-group selectedvalue">
+                  <input type="text" id="value-input" class="form-control arrow_box" value="200">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <nouislider [config]="afterfoodRange"></nouislider>
+        </div>
+      </div>
+  </div>
+</div>
+ <!--After food RowEnds-->
+
+  <!--Rbs Row starts-->
+  <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4 pmd-range-slider">
+          <div class="card-header">
+            <div class="row">
+              <div class="col heading-vitals"><strong>RBS </strong></div>
+              <div class="col  text-right">
+                <div class="range-slider-input">
+                  <div class="form-group selectedvalue">
+                    <input type="text" id="value-input" class="form-control arrow_box" value="250">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <nouislider [config]="rbsRange"></nouislider>
+          </div>
+        </div>
+    </div>
+  </div>
+   <!--Rbs  Row Ends-->
+   <!--Hba1c Row Star-->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4 pmd-range-slider">
+          <div class="card-header">
+            <div class="row">
+              <div class="col heading-vitals"><strong>HbA1c </strong></div>
+              <div class="col  text-right">
+                <div class="range-slider-input">
+                  <div class="form-group selectedvalue">
+                    <input type="text" id="value-input" class="form-control arrow_box" value="15">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <nouislider [config]="hba1cRange"></nouislider>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-block btn-primary mb-4"> Save Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+         <div class="row">
+            <div class="col-md-12">
+            <div class="card mb-4" >
+                <div class="card-header"> <strong>Previous Values     </strong> </div>
+             <div class="card-body">
+                 <table class="table table-bordered   table-striped table table-hover table-success">
+                     <thead>
+                         <tr>
+                            
+                             <th scope="col">Date</th>
+                             <th scope="col">13-Dec-2018</th>
+                          </tr>
+                     </thead>
+                     <tbody>
+                         <tr>
+                           
+                             <td >Fasting</td>
+                             <td>100</td>
+                             
+                         </tr>
+                         <tr>
+                           
+                             <td scope="row">After Food</td>
+                             <td>160</td>
+                             
+                         </tr>
+                         <tr>
+                           
+                             <td>RBS</td>
+                             <td>100</td>
+                             
+                         </tr>
+                         <tr>
+                           
+                            <td>HbA1c</td>
+                            <td>10</td>
+                            
+                        </tr>
+                     </tbody>
+                 </table>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          
+         </div>
+        <div class="row">
+            <div class="card">
+                 
+                  
+
+            </div>
+        </div>
+   </div>
+   
+  </div>
+   
+   
+    
+      
+   

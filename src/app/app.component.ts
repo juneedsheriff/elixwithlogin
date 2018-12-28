@@ -2,14 +2,14 @@
 import { Router, ActivatedRoute } from '@angular/router';
  import { AuthenticationService } from './_services';
 import { User } from './_models';
-
+ 
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent implements OnInit {
+    chart = [];
     currentUser: User;
     constructor(
         private router: Router,
-       
-        private authenticationService: AuthenticationService
+         private authenticationService: AuthenticationService
     ) {
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     }
@@ -21,8 +21,10 @@ export class AppComponent implements OnInit {
    
 
    public ngOnInit()
-    {
 
+   
+    {
+        
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
           };

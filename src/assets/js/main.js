@@ -5,11 +5,10 @@ $(document).ready(function () {
     $('#left-menu').on('click', function () {
         $('body').toggleClass('sidebar-left-close');
     });
-    $('.sidebar-left + div.backdrop').on('click', function () {
+    $('.sidebar-left + div.backdrop, .sidebar .nav .nav-item .nav-link').on('click', function () {
         $('body').addClass('sidebar-left-close');
     });
-
-      
+ 
 
     /* flip color setting block*/
     function setIntervalX(callback, delay, repetitions) {
@@ -302,3 +301,11 @@ $(window).on('load', function () {
     $('.wrapper').css('padding-bottom', $('body > footer').outerHeight() );
     $('body > footer').css('margin-top', -( $('body > footer').outerHeight() ));
 });
+ 
+	// single range slider
+	 
+	 
+	
+	// multiple handled with value 
+ 
+ 
