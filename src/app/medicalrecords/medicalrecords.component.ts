@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { flattenStyles } from '@angular/platform-browser/src/dom/dom_renderer';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-medicalrecords',
@@ -7,15 +7,17 @@ import { flattenStyles } from '@angular/platform-browser/src/dom/dom_renderer';
   styleUrls: ['./medicalrecords.component.css']
 })
 export class MedicalrecordsComponent implements OnInit {
+  closeResult: string;
 
-  constructor() { }
-
+  constructor(private modalService: NgbModal) {}
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+     });
+  }
+   
   ngOnInit() {
   }
-  afuConfig = {
-    multiple : false,
-    uploadAPI: {
-      url:"https://example-file-upload-api"
-    }
-};
+  
 }

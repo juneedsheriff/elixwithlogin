@@ -4,7 +4,9 @@ import { ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
- 
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
+
 
 
 // used to create fake backend
@@ -32,6 +34,7 @@ import { RespiratoryComponent } from './respiratory/respiratory.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { MedicalrecordsComponent } from './medicalrecords/medicalrecords.component';
 import { AngularFileUploaderModule } from "angular-file-uploader";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
@@ -43,7 +46,10 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
         NgxPopper,
         NgbModule,
         NouisliderModule,
-        AngularFileUploaderModule
+        AngularFileUploaderModule,
+        OwlDateTimeModule,
+     OwlNativeDateTimeModule,
+     BrowserAnimationsModule
      
       
     ],
@@ -79,3 +85,4 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
 })
 
 export class AppModule { }
+ 

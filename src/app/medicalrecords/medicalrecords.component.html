@@ -1,16 +1,72 @@
 <div class="wrapper">
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card">
-         <div class="card-body">
-            <angular-file-uploader
-          [config]="afuConfig">
-      </angular-file-uploader>
-         </div>
-      
+    <div class="background" ></div>
+<div class="container mt-4 main-container  range-slider-container">
+   <div class="row">
+       <div class="col-md-12">
+           <div class="card nbnone">
+               <div class="card-body">
+                    <div class="landing-header text-center mb-4">
+                            <h1 class="center-text fa-4x text-shadow ultrabold color-white bottom-10">Medical Records</h1>
+                            
+                            <em class="font-11 color-white opacity-60">Tap icon to upload your records</em>
+                            </div>
+                <div class="landing-icons">
+                        <a  class="active">
+                                <i class="icon-hospital16 icon shadow-icon-large gradient-green-dark "></i>
+                        <em>Clinic Records</em>
+                        </a>
+                        <a  routerLink="/records">
+                                <i class="icon-medical50  icon shadow-icon-large gradient-sky-light"></i>
+                        <em>Prescriptions</em>
+                        </a>
+                        <a  routerLink="/records">
+                                <i class="icon-flasks4 icon shadow-icon-large gradient-red-light"></i>
+                        <em>Lab Orders</em>
+                        </a>
+                        <a  routerLink="/records">
+                                <i class="icon-heart256 icon shadow-icon-large gradient-blue-light"></i>
+                                
+                        <em>Lab Reports</em>
+                        </a>
+                        <a  routerLink="/records">
+                                <i class="icon-xray2 icon shadow-icon-large gradient-orange-light "></i>
+                        <em>X-Ray</em>
+                        </a>
+                        <a  routerLink="/records">
+                                <i class="icon-lifeline9 icon shadow-icon-large gradient-brown-light"></i>
+                        <em>Mri</em>
+                        </a>
+                        
+                        <div class="clear"></div>
+                 </div>
+                 <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time">
+                 <owl-date-time #dt1></owl-date-time>
+                 </div>
+           </div>
+       </div>
+   
+   </div>
+   <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="dateOfBirth">Select Date</label>
+            <div class="input-group">
+              
+               
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      </div>
+    </ng-template>
+</div>   
 </div>
