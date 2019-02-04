@@ -1,0 +1,134 @@
+<div class="wrapper"> 
+          <!--heading Starts here-->
+    <div class="container-fluid bg-light-opac">
+        <div class="row">
+          <div class="container my-2 main-container">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <button class="btn btn-rounded  text-uppercase" routerLink="/recordsdashboard"><i class="material-icons">arrow_back</i>
+                  <span class="text-hide-xs"></span></button>
+              </div>
+              <div class="col">
+           
+                    <div class="form-group col-md-12  mb-0">
+                             <p class="mb-0"><strong class="mb-0">Medical History</strong></p> 
+                            <em class="font-11 color-white opacity-60">Add your Medical History </em>
+                        
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--heading Ends here-->
+ 
+      <div class="container mt-2 main-container mb-5 ">
+         
+          <ngb-accordion [closeOthers]="true" activeIds="medicalhistory" class="medicalhistory">
+              <ngb-panel id="medicalhistory" title="">
+                  <ng-template ngbPanelTitle>
+                      <span> <i class="material-icons">description</i>  Medical History</span> 
+                     </ng-template>
+                <ng-template ngbPanelContent>
+                   Records not found
+                   <div class="mt-2 mb-2 text-center">
+                       <hr>
+                    <button class="btn btn-primary   btn-sm text-uppercase " (click)="open(content)"> Add History</button>
+                    <hr>
+                   </div>
+
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel id="familyhistory"  class="bg-success">
+                  <ng-template ngbPanelTitle>
+                      <span> <i class="icon-family21"></i>  Family History </span> 
+                     </ng-template>
+                  <ng-template ngbPanelContent>
+                      Records not found
+                      <div class="mt-2 mb-2 text-center">
+                            <hr>
+                         <button class="btn btn-primary   btn-sm text-uppercase " (click)="open(content)"> Add History</button>
+                         <hr>
+                        </div>
+                  </ng-template>
+                </ngb-panel>
+             
+                <ngb-panel id="surgicalhistory"> 
+                    <ng-template ngbPanelTitle>
+                     <span> <i class="icon-surgery"></i>  Surgical History </span> 
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                       Records not found
+                       <div class="mt-2 mb-2 text-center">
+                            <hr>
+                         <button class="btn btn-primary   btn-sm text-uppercase " (click)="open(content)"> Add History</button>
+                         <hr>
+                        </div>
+                    </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="socialhistory">
+                      <ng-template ngbPanelTitle>
+                          <span> <i class="material-icons">person</i>  Social History </span> 
+                         </ng-template>
+                      <ng-template ngbPanelContent>
+                         Records not found
+                         <div class="mt-2 mb-2 text-center">
+                                <hr>
+                             <button class="btn btn-primary   btn-sm text-uppercase " (click)="open(content)"> Add History</button>
+                             <hr>
+                            </div>
+                      </ng-template>
+                    </ngb-panel>
+                    <ngb-panel id="allergies">
+                        <ng-template ngbPanelTitle>
+                            <span> <i class="material-icons">notifications_active</i>  Allergies </span> 
+                           </ng-template>
+                        <ng-template ngbPanelContent>
+                           Records not found
+                           <div class="mt-2 mb-2 text-center">
+                                <hr>
+                             <button class="btn btn-primary   btn-sm text-uppercase " (click)="open(content)"> Add Allergies</button>
+                             <hr>
+                            </div>
+                        </ng-template>
+                      </ngb-panel>
+                      <ngb-panel id="currentmedications">
+                          <ng-template ngbPanelTitle>
+                              <span> <i class="icon-medical49"></i>  Current Medications</span> 
+                             </ng-template>
+                          <ng-template ngbPanelContent>
+                             Records not found
+                             <div class="mt-2 mb-2 text-center">
+                                    <hr>
+                                 <button class="btn btn-primary   btn-sm text-uppercase " (click)="open(content)"> Add Medications</button>
+                                 <hr>
+                                </div>
+                          </ng-template>
+                        </ngb-panel>
+            </ngb-accordion>
+         
+             
+           
+          </div>
+          <ng-template #content let-modal>
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">History</h4>
+                  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="dateOfBirth">Add History</label>
+                      <div class="input-group">
+ <textarea class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-block" (click)="modal.close('Save click')">Save</button>
+                </div>
+              </ng-template>
+</div>

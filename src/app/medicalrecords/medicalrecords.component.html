@@ -1,18 +1,43 @@
 <div class="wrapper">
     <div class="background" ></div>
-<div class="container mt-4 main-container  range-slider-container">
+      <!--heading Starts here-->
+      <div class="container-fluid bg-light-opac">
+            <div class="row">
+              <div class="container my-2 main-container">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <button class="btn btn-rounded  text-uppercase" routerLink="/recordsdashboard"><i class="material-icons">arrow_back</i>
+                      <span class="text-hide-xs"></span></button>
+                  </div>
+                  <div class="col">
+               
+                    <form class="form-inline mt-0">
+                        <div class="form-group col-md-12 mb-0">
+                              
+                   <p class="mb-0"><strong class="mb-0">Upload Records</strong></p> 
+                                <em class="font-11 color-white opacity-60">Select icon to upload</em>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--heading Ends here-->
+<div class="container mt-2 main-container  range-slider-container">
    <div class="row">
        <div class="col-md-12">
            <div class="card nbnone">
-               <div class="card-body">
+               <div class="card-body pt-0">
                     <div class="landing-header text-center mb-4">
-                            <h1 class="center-text fa-4x text-shadow ultrabold color-white bottom-10">Medical Records</h1>
                             
-                            <em class="font-11 color-white opacity-60">Tap icon to upload your records</em>
+                            
+                            
                             </div>
                 <div class="landing-icons">
-                        <a  class="active">
-                                <i class="icon-hospital16 icon shadow-icon-large gradient-green-dark "></i>
+                        <a  class="active" routerLink="/records">
+                                <i class="material-icons  icon shadow-icon-large gradient-green-dark ">local_hospital</i>
+                                
                         <em>Clinic Records</em>
                         </a>
                         <a  routerLink="/records">
@@ -33,40 +58,83 @@
                         <em>X-Ray</em>
                         </a>
                         <a  routerLink="/records">
-                                <i class="icon-lifeline9 icon shadow-icon-large gradient-brown-light"></i>
-                        <em>Mri</em>
+                                <i class="icon-lifeline9 icon shadow-icon-large gradient-magenta-light"></i>
+                        <em>MRI</em>
                         </a>
                         
-                        <div class="clear"></div>
+                        <div class="clearfix"></div>
                  </div>
-                 <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time">
-                 <owl-date-time #dt1></owl-date-time>
+                 <div class="form-group">
+                    <div class="input-group">
+                        <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time" [(ngModel)]="selectedMoment" class="form-control">
+                        <owl-date-time #dt1></owl-date-time>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-success  calendar"   type="button" [owlDateTimeTrigger]="dt1"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                        <button class="btn btn-block btn-primary mb-4">Upload Records <i class="material-icons" >file_upload</i> </button>
+                    </div>
+                   
+                </div>
                  </div>
            </div>
        </div>
    
    </div>
-   <ng-template #content let-modal>
-      <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="dateOfBirth">Select Date</label>
-            <div class="input-group">
-              
-               
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-      </div>
-    </ng-template>
+ 
 </div>   
 </div>
+
+
+
+
+    <!--swipegallery Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                <!-- Background of PhotoSwipe. 
+                     It's a separate element as animating opacity is faster than rgba(). -->
+                <div class="pswp__bg"></div>
+                <!-- Slides wrapper with overflow:hidden. -->
+                <div class="pswp__scroll-wrap">
+                    <!-- Container that holds slides. 
+                        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                        Don't modify these 3 pswp__item elements, data is added later on. -->
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                    <div class="pswp__ui pswp__ui--hidden">
+                        <div class="pswp__top-bar">
+                            <!--  Controls are self-explanatory. Order can be changed. -->
+                            <div class="pswp__counter"></div>
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                           
+                            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                            <!-- element will get class pswp__preloader--active when preloader is running -->
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                    <div class="pswp__preloader__cut">
+                                        <div class="pswp__preloader__donut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                            <div class="pswp__share-tooltip"></div>
+                        </div>
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>

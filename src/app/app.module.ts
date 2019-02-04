@@ -5,16 +5,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
-
-
-
-
-// used to create fake backend
 import { fakeBackendProvider } from './_helpers';
-
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
-
 import { AlertComponent } from './_components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
@@ -33,9 +26,12 @@ import { PulserateComponent } from './pulserate/pulserate.component';
 import { RespiratoryComponent } from './respiratory/respiratory.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { MedicalrecordsComponent } from './medicalrecords/medicalrecords.component';
-import { AngularFileUploaderModule } from "angular-file-uploader";
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';;
+import { ViewmedicalrecordsComponent } from './viewmedicalrecords/viewmedicalrecords.component'
+import { LightboxModule } from 'ngx-lightbox';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { RecordsdashboardComponent } from './recordsdashboard/recordsdashboard.component';
+import { MedicalhistoryComponent } from './medicalhistory/medicalhistory.component'
 @NgModule({
     imports: [
         BrowserModule,
@@ -46,10 +42,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         NgxPopper,
         NgbModule,
         NouisliderModule,
-        AngularFileUploaderModule,
         OwlDateTimeModule,
-     OwlNativeDateTimeModule,
-     BrowserAnimationsModule
+        OwlNativeDateTimeModule,
+        BrowserAnimationsModule,
+        LightboxModule 
      
       
     ],
@@ -69,11 +65,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         PulserateComponent,
         RespiratoryComponent,
         BmiComponent,
-        MedicalrecordsComponent
-    ],
+        MedicalrecordsComponent,
+        ViewmedicalrecordsComponent ,
+        MedicalhistoryComponent,
+        RecordsdashboardComponent],
+       
        
     providers: [
         fakeBackendProvider,
+        {provide: LocationStrategy, useClass: HashLocationStrategy},
          { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
        

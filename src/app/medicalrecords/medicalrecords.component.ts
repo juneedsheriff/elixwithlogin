@@ -8,6 +8,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class MedicalrecordsComponent implements OnInit {
   closeResult: string;
+  public selectedMoment = new Date();
 
   constructor(private modalService: NgbModal) {}
   open(content) {
@@ -19,5 +20,5 @@ export class MedicalrecordsComponent implements OnInit {
    
   ngOnInit() {
   }
-  
+   
 }

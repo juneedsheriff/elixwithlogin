@@ -87,7 +87,7 @@ Cutomize css starts
     display: block;
     overflow: hidden;
 }
-
+.form-control.ht-40{ height: 40px;}
   html {
     font-family: sans-serif;
     line-height: 1.15;
@@ -97,6 +97,41 @@ Cutomize css starts
     -webkit-tap-highlight-color: transparent;
   }
   .nbnone{ background: none !important; box-shadow: none !important}
+
+
+  
+
+  /* Medical History*/
+  #medicalhistory .card-body, #familyhistory .card-body,   #surgicalhistory .card-body, #socialhistory  .card-body,  #currentmedications .card-body,   #allergies .card-body{ padding: 0em 0.95em; }
+
+  #medicalhistory-header h5 {
+    background-image: linear-gradient(-180deg, #A0D468 0, #75a243 100%)
+}
+
+ 
+#familyhistory-header  h5{
+  background-image: linear-gradient(180deg, #4dd9b6 0, #31a789 100%)
+}
+#surgicalhistory-header  h5{
+  background-image: linear-gradient(180deg, #b49fe6 0, #7863af 100%)
+}
+#socialhistory-header  h5{
+  background-image: linear-gradient(-180deg, #52bee3 0, #3291b4 100%)
+}
+#allergies-header  h5{    background-image: linear-gradient(-180deg, #FC6E51 0, #d14b35 100%)
+}
+#currentmedications-header h5{background-image: linear-gradient(180deg, #e79822 0, #906b3b 100%) }
+
+#medicalhistory-header h5, #familyhistory-header  h5, #surgicalhistory-header  h5, #socialhistory-header  h5,  #currentmedications-header  h5, #allergies-header  h5{
+border-radius: 10px 10px 0px 0px;
+-moz-border-radius: 10px 10px 0px 0px;
+-webkit-border-radius: 10px 10px 0px 0px;
+font-size: 1em;
+ 
+}
+#medicalhistory-header h5 .btn-link, #familyhistory-header  h5 .btn-link, #surgicalhistory-header  h5 .btn-link , #socialhistory-header  h5 .btn-link,  #currentmedications-header  h5 .btn-link, #allergies-header  h5 .btn-link{color: #fff; width: 100%; display: block; text-align: left; text-decoration: none}
+
+
   @-ms-viewport {
     width: device-width;
   }
@@ -2933,7 +2968,8 @@ Cutomize css starts
     border-bottom: 0;
     border-left: 0.3em solid transparent;
   }
-  
+  .elixdropdown  .dropdown-toggle::after { margin: 0; border-width: 0}
+  .elixdropdown .dropdown-item .material-icons{ font-size: 1.2em; color:#86908e; padding-right: 5px;}
   .dropdown-toggle:empty::after {
     margin-left: 0;
   }

@@ -1,0 +1,11 @@
+.landing-header h1{ font-size: 1.8rem; color:#16b393}
+.landing-header h1 {
+  
+    font-weight: 700;
+    background: -webkit-linear-gradient(45deg, #138fc2, #17b596 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+ 

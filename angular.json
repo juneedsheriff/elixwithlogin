@@ -28,10 +28,13 @@
               "src/assets/fonts/materializeicon/material-icons.css",
               "node_modules/nouislider/distribute/nouislider.min.css",
                "src/assets/css/range-slider.css",
+               "node_modules/ngx-lightbox/lightbox.css",
+               "src/assets/masonry_swipebox/PhotoSwipe-master/dist/default-skin/default-skin.css",
+               "src/assets/masonry_swipebox/PhotoSwipe-master/dist/photoswipe.css",
               "src/styles.css"
                
             ],
-            "scripts": ["node_modules/jquery/dist/jquery.min.js",  "node_modules/popper.js/dist/umd/popper.min.js",  "src/assets/js/main.js",  "src/assets/js/wNumb.js" ]
+            "scripts": ["node_modules/jquery/dist/jquery.min.js",  "node_modules/popper.js/dist/umd/popper.min.js", "src/assets/masonry_swipebox/PhotoSwipe-master/dist/photoswipe.min.js", "src/assets/masonry_swipebox/PhotoSwipe-master/dist/photoswipe-ui-default.min.js", "src/assets/js/photoswipesctipt.js", "src/assets/js/main.js"]
           },
           "configurations": {
             "production": {
