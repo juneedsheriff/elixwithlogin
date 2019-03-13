@@ -15,7 +15,9 @@ import { BmiComponent } from './bmi/bmi.component';
 import { MedicalrecordsComponent } from './medicalrecords/medicalrecords.component';
 import { ViewmedicalrecordsComponent } from './viewmedicalrecords/viewmedicalrecords.component';
 import { RecordsdashboardComponent } from './recordsdashboard/recordsdashboard.component';
-import { MedicalhistoryComponent } from './medicalhistory/medicalhistory.component'
+import { MedicalhistoryComponent } from './medicalhistory/medicalhistory.component';
+import { ProfileComponent } from './profile/profile.component';
+import { TablemainComponent } from './tablemain/tablemain.component'
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     { path: 'viewrecords', component:  ViewmedicalrecordsComponent  },
     { path: 'recordsdashboard', component:  RecordsdashboardComponent  },
     { path: 'medicalhistory', component:  MedicalhistoryComponent  },
-    // otherwise redirect to home
+    { path: 'profile', component:  ProfileComponent  },
+     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
 

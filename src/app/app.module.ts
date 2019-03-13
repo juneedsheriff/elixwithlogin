@@ -31,7 +31,9 @@ import { ViewmedicalrecordsComponent } from './viewmedicalrecords/viewmedicalrec
 import { LightboxModule } from 'ngx-lightbox';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { RecordsdashboardComponent } from './recordsdashboard/recordsdashboard.component';
-import { MedicalhistoryComponent } from './medicalhistory/medicalhistory.component'
+import { MedicalhistoryComponent } from './medicalhistory/medicalhistory.component';
+import { ProfileComponent } from './profile/profile.component';
+ 
 @NgModule({
     imports: [
         BrowserModule,
@@ -68,7 +70,9 @@ import { MedicalhistoryComponent } from './medicalhistory/medicalhistory.compone
         MedicalrecordsComponent,
         ViewmedicalrecordsComponent ,
         MedicalhistoryComponent,
-        RecordsdashboardComponent],
+        RecordsdashboardComponent,
+        ProfileComponent,
+       ],
        
        
     providers: [
